@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "dolor3v-microcloud" generated at 2026-09-23T01:15:47.167Z.

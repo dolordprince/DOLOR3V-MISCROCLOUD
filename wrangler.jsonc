@@ -1,0 +1,42 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dolor3v-microcloud",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-09-23",
+  "alias": {
+    "node:tty": "./shims/tty.js",
+    "tty": "./shims/tty.js",
+    "node:os": "./shims/os.js",
+    "os": "./shims/os.js",
+    "node:fs": "./shims/fs.js",
+    "fs": "./shims/fs.js",
+    "node:path": "./shims/path.js",
+    "path": "./shims/path.js"
+  },
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "browser": {
+    "binding": "BROWSER"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MicrocloudAgentDO",
+        "class_name": "MicrocloudAgentDO"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "MicrocloudAgentDO"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
